@@ -2,7 +2,7 @@
 
 var express = require('express');
 var app = express();
-var port = 8080;
+var port = 80:
 
 app.set('view engine', 'ejs');
 
