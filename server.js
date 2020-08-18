@@ -10,5 +10,9 @@ app.get('/', function(req, res) {
 	res.render('home.ejs');
 });
 
+app.get('/projects', function(req, res) {
+	res.render('projects.ejs');
+})
+
 app.listen(port)
 console.log(`Server now running on port ${port}`)

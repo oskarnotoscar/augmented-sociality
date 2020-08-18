@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Augmented Sociality</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/177f1bd199.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function() {
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
+            });
+        });
+    </script>
+  </head>
+  <body>
+      <!-- Navbar -->
+      <section class="section">
+        <div class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="https://bulma.io">
+                <img src="https://www.qut.edu.au/__data/assets/image/0007/909781/qut-logo-og-1200.jpg">
+              </a>
+          
+              <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item" href="/">
+                  Home
+                </a>
+          
+                <a class="navbar-item" href="/projects">
+                  Projects
+                </a>
+          
+                <a href="#" class="navbar-item">
+                    Casestudy
+                </a>
+                <a href="#" class="navbar-item">
+                    Research
+                </a>
+                <a href="#" class="navbar-item">
+                    Information
+                </a>
+                <a href="#" class="navbar-item">
+                    Contact Us
+                </a>
+                
+              </div>
+          
+              <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                      <p class="control">
+                        <a class="button-no-blue">
+                          <span class="icon">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                          </span>
+                        </a>
+                      </p>
+                      <p class="control">
+                        <a class="button-no-blue">
+                          <span class="icon">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                          </span>
+                        </a>
+                      </p><p class="control">
+                        <a class="button-no-blue">
+                          <span class="icon">
+                            <i class="fab fa-google-plus-g" aria-hidden="true"></i>
+                          </span>
+                        </a>
+                      </p>
+                      <p class="control">
+                        <a class="button-no-blue">
+                          <span class="icon">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                          </span>
+                        </a>
+                      </p>
+                    </div>
+                </div>
+                <div class="navbar-item">
+                  <div class="buttons">
+                    <a class="button is-link">
+                      <strong>Quick Look At The AR</strong>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+          </div>
+      </section>
+      
+      <div class="hero is-large is-black has-background">
+        <img alt="Fill Murray" class="hero-background is-transparent" src="images/slide1.jpg" />
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title is-1">
+              Most Recognised Augmented Reality Technology
+            </h1>
+            <h3 class="subtitle is-5">
+              QUT is a leading Australian University with a particular focus on science, engineering and technology.
+            </h3>
+            
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Augmented Sociality</strong> for <strong>Joel Harman</strong> by <a href="https://jgthms.com">Matrix Studio</a>
+          </p>
+        </div>
+      </footer>
+      
+  </body>
+</html>
