@@ -14,8 +14,16 @@ app.get('/projects', function(req, res) {
 	res.render('projects.ejs');
 })
 
+app.get('/about-us', function(req, res) {
+	res.render('about-us.ejs');
+})
+
 app.get('/contact-us', function(req, res) {
 	res.render('contactus.ejs');
+})
+
+app.get('/news', function(req, res) {
+	res.render('news.ejs');
 })
 
 app.listen(port)
