@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Us - Augmented Sociality</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="styles/custom_styles.css">
     <link rel="stylesheet" href="styles/stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/177f1bd199.js" crossorigin="anonymous"></script>
@@ -81,11 +81,15 @@
                     </div>
                 </div>
                 <div class="navbar-item">
-                  <div class="buttons">
-                    <a class="button is-link" href="/news">
-                      <strong>Login</strong>
-                    </a>
-                  </div>
+                  <% if (!session.loggedin) { %>
+                    <div class="buttons">
+                      <a class="button is-dark" href="/login">
+                        <strong>Login</strong>
+                      </a>
+                    </div>
+                  <% } else {%>
+                    <p>Welcome back, <%= session.username %></p>
+                  <% } %>
                 </div>
               </div>
             </div>
@@ -107,76 +111,135 @@
       </section>
 
       <section class="section">
-          <div class="container">
+        <div class="container">
+          <div class="columns">
+              <div class="column">
+                  <div class="card">
+
+                      <div class="card-content">
+                        <div class="media">
+                            <figure class="media-left">
+                                <img src="https://staff.qut.edu.au/wp-content/uploads/avatars/2454/29770507d8279ccc21c6871c246dec71-bpfull.jpg" alt="Placeholder image">
+                            </figure>
+                          <div class="media-content">
+                            <p class="title is-4">Alessandro Soro </p>
+                            <p class="subtitle is-6">alessandro.soro@qut.edu.au</p>
+                              <p>
+                                  Senior Lecturer<br>
+                                  Science and Engineering Faculty<br>
+                                  School of Computer Science</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+              <div class="column">
+                  <div class="card">
+
+                      <div class="card-content">
+                        <div class="media">
+                            <figure class="media-left">
+                                <img src="https://staff.qut.edu.au/wp-content/uploads/avatars/1230/16c209c41203f5294467dedfc4525b5e-bpfull.jpg" alt="Placeholder image">
+                            </figure>
+
+                          <div class="media-content">
+                            <p class="title is-4">Ross Brown </p>
+                            <p class="subtitle is-6">r.brown@qut.edu.au</p>
+                              <p>
+                                  Senior Lecturer<br>
+                                  Science and Engineering Faculty<br>
+                                  School of Computer Science</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+              <div class="column">
+                  <div class="card">
+
+                      <div class="card-content">
+                        <div class="media">
+                            <figure class="media-left">
+                                <img src="https://staff.qut.edu.au/wp-content/uploads/avatars/3486/21c3678e5aec064775984180cfab99e9-bpfull.jpg" alt="Placeholder image">
+                            </figure>
+                          <div class="media-content">
+                            <p class="title is-4">Selen Turkay </p>
+                            <p class="subtitle is-6">selen.turkay@qut.edu.au</p>
+                              <p>Lecturer in Computer Human Interaction<br>
+                                  Science and Engineering<br>
+                                  School of Computer Science</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
             <div class="columns">
                 <div class="column">
                     <div class="card">
-                        <div class="card-image">
-                          <figure class="image is-square">
-                            <img src="https://staff.qut.edu.au/wp-content/uploads/avatars/1230/16c209c41203f5294467dedfc4525b5e-bpfull.jpg" alt="Placeholder image">
-                          </figure>
-                        </div>
+
                         <div class="card-content">
-                          <div class="media">
-                            <div class="media-content">
-                              <p class="title is-4">Dr. Ross Brown</p>
-                              <p class="subtitle is-6">@DaseinScience</p>
-                            </div>
-                          </div>
-                      
-                          <div class="content">
-                            I am a Senior Lecturer within the School of Electrical Engineering and Computer Science (EECS), QUT, where I am a member of the Computer Human Interaction (CHI) discipline.
+                            <div class="media">
+                                <figure class="media-left">
+                                    <img src="https://staff.qut.edu.au/wp-content/uploads/avatars/1230/16c209c41203f5294467dedfc4525b5e-bpfull.jpg" alt="Placeholder image">
+                                </figure>
+                                <div class="media-content">
+                                    <p class="title is-4">Aloha Ambe </p>
+                                    <p class="subtitle is-6">sample.email@qut.edu.au</p>
+                                    <p>Research Fellow<br>
+                                      Science and Engineering Faculty<br>
+                                      School of Computer Science</p>
+                                </div>
                             </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="column">
                     <div class="card">
-                        <div class="card-image">
-                          <figure class="image is-square">
-                            <img src="https://staff.qut.edu.au/wp-content/uploads/avatars/826/d9db5a88352f929294a8dc72bb8e87ba-bpfull.jpg" alt="Placeholder image">
-                          </figure>
-                        </div>
+
                         <div class="card-content">
-                          <div class="media">
-                            <div class="media-left">
+                            <div class="media">
+                                <figure class="media-left">
+                                    <img src="https://staff.qut.edu.au/wp-content/uploads/avatars/4098/5e8a8a082a62c-bpfull.jpg" alt="Placeholder image">
+                                </figure>
+                                <div class="media-content">
+                                    <p class="title is-4">Joel Harman </p>
+                                    <p class="subtitle is-6">ja.harman@qut.edu.au</p>
+                                    <p>Research Fellow<br>
+                                        Science and Engineering Faculty<br>
+                                        School of Computer Science</p>
+                                </div>
                             </div>
-                            <div class="media-content">
-                              <p class="title is-4">Associate Professor Jim Hogan</p>
-                              <!-- p class="subtitle is-6">@johnsmith</p -->
-                            </div>
-                          </div>
-                      
-                          <div class="content">
-                            Professor Hogan’s interest is in the application of machine learning methods to pattern discovery problems in bioinformatics, specifically the discovery of regulatory motifs in bacteria and resulting inference of regulatory networks and their properties.
-                          </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="column">
                     <div class="card">
-                        <div class="card-image">
-                          <figure class="image is-square">
-                            <img src="https://staff.qut.edu.au/wp-content/uploads/avatars/139/540aee71c089bd8a9a6999ea66d10573-bpfull.jpg" alt="Placeholder image">
-                          </figure>
-                        </div>
+
                         <div class="card-content">
-                          <div class="media">
-                            <div class="media-content">
-                              <p class="title is-4">Professor Colin Fidge</p>
-                              <!--p class="subtitle is-6">@johnsmith</p -->
+                            <div class="media">
+                                <figure class="media-left">
+                                    <img src="https://staff.qut.edu.au/wp-content/uploads/avatars/139/540aee71c089bd8a9a6999ea66d10573-bpfull.jpg" alt="Placeholder image">
+                                </figure>
+                                <div class="media-content">
+                                    <p class="title is-4">Michael Hunter</p>
+                                    <p class="subtitle is-6">sample.email@qut.edu.au</p>
+                                    <p>Research Fellow<br>
+                                      Science and Engineering Faculty<br>
+                                      School of Computer Science</p>
+                                </div>
                             </div>
-                          </div>
-                      
-                          <div class="content">
-                            I am a Senior Lecturer within the School of Electrical Engineering and Computer Science (EECS), QUT, where I am a member of the Computer Human Interaction (CHI) discipline.
-                          </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
-              </div>
-          </div>
-      </section>
+            </div>
+        </div>
+    </section>
       
       <footer class="footer">
         <div class="content has-text-centered">

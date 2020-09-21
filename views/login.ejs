@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home - Augmented Sociality</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="styles/custom_styles.css">
     <link rel="stylesheet" href="styles/stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/177f1bd199.js" crossorigin="anonymous"></script>
@@ -23,7 +23,6 @@
     </script>
   </head>
   <body>
-      <!-- Navbar -->
       <section class="section">
         <div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -82,15 +81,15 @@
                     </div>
                 </div>
                 <div class="navbar-item">
-                  <% if (!session.loggedin) { %>
-                    <div class="buttons">
-                      <a class="button is-dark" href="/login">
-                        <strong>Login</strong>
-                      </a>
-                    </div>
-                  <% } else {%>
-                    <p>Welcome back, <%= session.username %></p>
-                  <% } %>
+                    <% if (!session.loggedin) { %>
+                        <div class="buttons">
+                          <a class="button is-dark" href="/login">
+                            <strong>Login</strong>
+                          </a>
+                        </div>
+                      <% } else {%>
+                        <p>Welcome back, <%= session.username %></p>
+                      <% } %>
                 </div>
               </div>
             </div>
@@ -98,52 +97,39 @@
           </div>
       </section>
       
-      <section class="hero is-link is-bold">
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title is-1 has-text-centered">
-              Projects
-            </h1>
-            <h2 class="subtitle has-text-centered">
-              Our latest technologies
-            </h2>
-          </div>
-        </div>
-      </section>
-
       <section class="section">
-          <!-- Pokemon GO container -->
-          <div class="container">
-              <div class="container">
-                  <div class="columns">
-                      <div class="column is-three-fifths">
-                          <h3 class="subtitle is-4">Pokemon Go</h3>
-                        <h1 class="title is-2">Get Up & Go</h1>
-                        <p class="">Pokémon: Let's Go, Pikachu! and Pokémon: Let's Go, Eevee! bring the experience of a classic Pokémon RPG to Nintendo Switch with gameplay that is easily approachable for newcomers to the series, but is also deep enough to keep veteran Trainers on their toes. And there’s a deep connection between Pokémon: Let's Go, Pikachu! and Pokémon: Let's Go, Eevee! and Pokémon GO, so fans of the hit mobile game will find even more to enjoy.</p>
-                      </div>
-                      <div class="column">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2sj2iQyBTQs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                      </div>
+        <div class="container">
+            <form action="" method="POST">
+                <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                      <input class="input" type="email" placeholder="Email" name="email">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+                      <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                      </span>
+                    </p>
+                    <% if(incorrect) { %>
+                        <p class="help is-danger">Either the email or password is incorrect!</p>
+                    <% } %>
                   </div>
-              </div>
-          </div>
-          <!-- WannaKicks Container -->
-          <div class="container">
-            <div class="container">
-                <div class="columns">
-                    <div class="column">
-                      <figure class="image is-3by2">
-                        <img src="images/WannaKicks.jpg" alt="Placeholder image">
-                      </figure>    
-                    </div>
-                    <div class="column is-three-fifths">
-                      <h3 class="subtitle is-4">Try it on!</h3>
-                      <h1 class="title is-2">Wanna Kicks</h1>
-                      <p>Hot or not, what do you think? Be the first to experience yet to be released sneakers.
-                        Wanna Kicks is the sneaker try on app, where you can discover fresh drops and classic sneakers with the help of augmented reality. Try the kicks instantly on your feet regardless of where you are and then snap a photo to surprise your friends.</p>
-                    </div>
-                </div>
-            </div>
+                  <div class="field">
+                    <p class="control has-icons-left">
+                      <input class="input" type="password" placeholder="Password" name="password">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control">
+                      <button class="button is-success">
+                        Login
+                      </button>
+                    </p>
+                  </div>
+            </form>
         </div>
       </section>
 

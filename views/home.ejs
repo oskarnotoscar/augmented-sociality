@@ -81,11 +81,15 @@
                     </div>
                 </div>
                 <div class="navbar-item">
-                  <div class="buttons">
-                    <a class="button is-dark" href="/news">
-                      <strong>Login</strong>
-                    </a>
-                  </div>
+                  <% if (!session.loggedin) { %>
+                    <div class="buttons">
+                      <a class="button is-dark" href="/login">
+                        <strong>Login</strong>
+                      </a>
+                    </div>
+                  <% } else {%>
+                    <p>Welcome back, <%= session.username %></p>
+                  <% } %>
                 </div>
               </div>
             </div>
@@ -230,25 +234,20 @@
         <div class="hero-body">
           <div class="container">
             <h2 class="title is-2 has-text-centered">Newsletter</h1>
-            <div class="field is-horizontal">
-              <div class="field-body">
-                <div class="field">
+                <form action="https://outlook.us2.list-manage.com/subscribe/post?u=f4714353be4ad550731941f94&amp;id=ec1f81f6f6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"target="_blank" novalidate>
                   <div class="field has-addons has-addons-centered">
                     <p class="control">
-                      <input class="input is-medium" type="email" placeholder="Email address">
+                      <input class="input is-medium" type="email" value="" name="EMAIL" placeholder="Email address" id="mce-EMAIL">
                     </p>
                     <p class="control">
-                      <a class="button is-dark is-medium">
-                        Subscribe
-                      </a>
+                      <input class="button is-dark is-medium" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" type="submit">
                     </p>
                   </div>
-                </div>
-              </div>
-            </div>
+                </form>
           </div>
         </div>
       </section>
+
 
       <footer class="footer">
         <div class="content has-text-centered">

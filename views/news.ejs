@@ -84,11 +84,15 @@
                             </div>
                         </div>
                         <div class="navbar-item">
-                            <div class="buttons">
-                                <a class="button is-link" href="/news">
+                            <% if (!session.loggedin) { %>
+                                <div class="buttons">
+                                  <a class="button is-dark" href="/login">
                                     <strong>Login</strong>
-                                </a>
-                            </div>
+                                  </a>
+                                </div>
+                              <% } else {%>
+                                <p>Welcome back, <%= session.username %></p>
+                              <% } %>
                         </div>
                     </div>
                 </div>
