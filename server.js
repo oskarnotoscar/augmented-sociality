@@ -30,6 +30,10 @@ app.get('/', function(req, res) {
 	res.render('home.ejs', { session: req.session})
 });
 
+app.get('/popular-projects', function(req, res) {
+	res.render('popular-projects.ejs', { session: req.session});
+})
+
 app.get('/projects', function(req, res) {
 	res.render('projects.ejs', { session: req.session});
 })
@@ -72,8 +76,7 @@ app.post('/login', function(req, res) {
 			}
 		})
 	} else {
-		res.send('Please enter a Username and Password!')
-		res.end()
+		res.render('login.ejs', {session: req.session, incorrect: true})
 	}
 })
 

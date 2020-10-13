@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Popular Projects - Augmented Sociality</title>
+    <link rel="stylesheet" href="styles/custom_styles.css">
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/177f1bd199.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function() {
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
+            });
+        });
+    </script>
+  </head>
+  <body>
+      <!-- Navbar -->
+      <section class="section">
+        <div class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/">
+                <img src="https://www.qut.edu.au/__data/assets/image/0007/909781/qut-logo-og-1200.jpg">
+              </a>
+          
+              <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item" href="/">
+                  Home
+                </a>
+                <a class="navbar-item" href="/popular-projects">
+                  Popular AR Technologies
+                </a>
+                <a class="navbar-item" href="/projects">
+                  Projects
+                </a>
+                <a href="/news" class="navbar-item">
+                    News
+                </a>
+                <!-- a href="/information" class="navbar-item">
+                    Information
+                </a -->
+                <a href="/about-us" class="navbar-item">
+                  About us
+                </a>
+                <a href="/contact-us" class="navbar-item">
+                    Contact Us
+                </a>
+                
+              </div>
+          
+              <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                      <p class="control">
+                        <a class="button-no-blue">
+                          <span class="icon">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                          </span>
+                        </a>
+                      </p>
+                      <p class="control">
+                        <a class="button-no-blue">
+                          <span class="icon">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                          </span>
+                        </a>
+                      </p>
+                    </div>
+                </div>
+                <div class="navbar-item">
+                  <% if (!session.loggedin) { %>
+                    <div class="buttons">
+                      <a class="button is-dark" href="/login">
+                        <strong>Login</strong>
+                      </a>
+                    </div>
+                  <% } else {%>
+                    <p>Welcome back, <%= session.username %></p>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+          </nav>
+          </div>
+      </section>
+      
+      <section class="hero is-link is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title has-text-centered">
+              Popular AR Technologies
+            </h1>
+            <h2 class="subtitle has-text-centered">
+              The Latest in AR Technology
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+          <!-- Pokemon GO container -->
+          <div class="container" id="pokemon">
+              <div class="container">
+                  <div class="columns">
+                      <div class="column is-three-fifths">
+                          <h3 class="subtitle is-4">Pokemon Go</h3>
+                        <h1 class="title is-2">Get Up & Go</h1>
+                        <p class="">Pokémon: Let's Go, Pikachu! and Pokémon: Let's Go, Eevee! bring the experience of a classic Pokémon RPG to Nintendo Switch with gameplay that is easily approachable for newcomers to the series, but is also deep enough to keep veteran Trainers on their toes. And there’s a deep connection between Pokémon: Let's Go, Pikachu! and Pokémon: Let's Go, Eevee! and Pokémon GO, so fans of the hit mobile game will find even more to enjoy.</p>
+                      </div>
+                      <div class="column">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2sj2iQyBTQs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- WannaKicks Container -->
+          <div class="container" id="wannakicks">
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                      <figure class="image is-3by2">
+                        <img src="images/WannaKicks.jpg" alt="Placeholder image">
+                      </figure>    
+                    </div>
+                    <div class="column is-three-fifths">
+                      <h3 class="subtitle is-4">Try it on!</h3>
+                      <h1 class="title is-2">Wanna Kicks</h1>
+                      <p>Hot or not, what do you think? Be the first to experience yet to be released sneakers.
+                        Wanna Kicks is the sneaker try on app, where you can discover fresh drops and classic sneakers with the help of augmented reality. Try the kicks instantly on your feet regardless of where you are and then snap a photo to surprise your friends.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Holo container -->
+        <div class="container" id="holo">
+          <div class="container">
+              <div class="columns">
+                  <div class="column is-three-fifths">
+                      <h3 class="subtitle is-4">Holo</h3>
+                    <h1 class="title is-2">Holograms in Augmented Reality</h1>
+                    <p class="">The most exciting thing about Apple’s recent announcement of iOS 11 at WWDC, to me, was ARKit. The idea that augmented reality is going to be baked into the mobile operating system means all sorts of weird stuff is on the way this fall. If, like me, you’re anxious to play around with AR, but you also don’t want to burden your iPhone with a buggy developer beta version of iOS 11, a new app called Holo is almost good enough to scratch that itch.</p>
+                  </div>
+                  <div class="column">
+                    <figure class="image is-3by2">
+                      <img src="images/Holo.jpg" alt="Hologram image">
+                    </figure>   
+                  </div>
+              </div>
+          </div>
+      </div>
+      </section>
+
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Augmented Sociality</strong> for <strong>Joel Harman</strong> by <a href="https://jgthms.com">Matrix Studio</a>
+          </p>
+        </div>
+      </footer>
+      
+  </body>
+</html>
