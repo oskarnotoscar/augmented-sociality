@@ -80,5 +80,9 @@ app.post('/login', function(req, res) {
 	}
 })
 
+app.get('/matrix-studio', function(req, res) {
+	res.render('matrixstudio.ejs', { session: req.session});
+})
+
 app.listen(port)
 console.log(`Server now running on port ${port}`)

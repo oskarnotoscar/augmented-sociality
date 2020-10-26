@@ -16,3 +16,12 @@
   .button-no-blue {
       color: inherit;
   }
+
+  .link-underlines {
+    color: white;
+  }
+
+  .link-underlines:hover {
+    color: white;
+    text-decoration: underline;
+  }
